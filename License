@@ -1,0 +1,52 @@
+
+### `SECURITY.md`
+```markdown
+# Security Policy
+
+## Reporting a Vulnerability
+
+**DO NOT** open public issues for security vulnerabilities.
+
+**Email**: security@yourdomain.com
+
+Include:
+- Description
+- Steps to reproduce
+- Potential impact
+- Suggested fix
+
+## Response Time
+
+- Acknowledgment: 48 hours
+- Assessment: 1 week
+- Updates: Every 2 weeks
+
+## Severity Levels
+
+**Critical**: Private key exposure, fund theft, privacy breach  
+**High**: Proof bypass, cross-chain attacks  
+**Medium**: DoS, information disclosure  
+**Low**: Minor issues  
+
+## Testnet Disclaimer
+
+⚠️ This is a testnet implementation:
+- Simulated proofs
+- Mock verification
+- Not production-ready
+
+**Never use with real funds without audits.**
+
+## Best Practices
+
+### Users
+- Never share private keys
+- Verify addresses
+- Use testnet only
+- Review transactions
+
+### Developers
+- No secrets in code
+- Validate inputs
+- Use secure dependencies
+- Implement rate limiting
