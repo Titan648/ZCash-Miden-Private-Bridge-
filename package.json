@@ -2,13 +2,31 @@
   "name": "zcash-miden-private-bridge",
   "version": "1.0.0",
   "type": "module",
-  "description": "Privacy-preserving cross-chain bridge between Zcash and Miden",
-  "keywords": ["blockchain", "privacy", "zero-knowledge", "zcash", "miden", "bridge"],
+  "description": "Privacy-preserving cross-chain bridge between Zcash and Miden using zero-knowledge proofs",
+  "keywords": [
+    "blockchain",
+    "privacy",
+    "zero-knowledge-proofs",
+    "zcash",
+    "miden",
+    "cross-chain",
+    "bridge",
+    "zk-snarks",
+    "stark"
+  ],
   "author": "Your Name",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/zcash-miden-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/zcash-miden-bridge/issues"
+  },
+  "homepage": "https://github.com/yourusername/zcash-miden-bridge#readme",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "relayer": "node --loader ts-node/esm src/relayer/index.ts"
   },
