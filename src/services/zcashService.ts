@@ -2,7 +2,7 @@ export class ZcashService {
   private rpcUrl: string;
 
   constructor() {
-    this.rpcUrl = import.meta.env.VITE_ZCASH_TESTNET_RPC || 'https://testnet.zcash.network';
+    this.rpcUrl = import.meta.env.VITE_ZCASH_TESTNET_RPC || 'https://testnet.zecfaucet.com/';
   }
 
   async createShieldedCommitment(amount: string, address: string, memo?: string) {
@@ -31,7 +31,7 @@ export class ZcashService {
     };
   }
 
-  async unlockFunds(address: string, amount: string, proof: any, memo?: string) {
+  async unlockFunds(address: string, amount: string, _proof: any, memo?: string) {
     await this.delay(2000);
 
     return {
@@ -43,7 +43,7 @@ export class ZcashService {
     };
   }
 
-  async verifyShieldedTransaction(txid: string) {
+  async verifyShieldedTransaction(_txid: string) {
     await this.delay(1000);
 
     return {
