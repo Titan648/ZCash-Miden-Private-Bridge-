@@ -2,7 +2,7 @@ export class MidenService {
   private rpcUrl: string;
 
   constructor() {
-    this.rpcUrl = import.meta.env.VITE_MIDEN_TESTNET_RPC || 'https://testnet.miden.network';
+    this.rpcUrl = import.meta.env.VITE_MIDEN_TESTNET_RPC || 'https://testnet.midenscan.com/';
   }
 
   async mintPrivateAsset(address: string, amount: string, proof: any) {
@@ -41,7 +41,7 @@ export class MidenService {
     };
   }
 
-  async verifyProof(proof: any) {
+  async verifyProof(_proof: any) {
     await this.delay(1000);
 
     return {
