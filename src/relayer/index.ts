@@ -35,9 +35,9 @@ function broadcast(data: any) {
   });
 }
 
-app.post('/api/submit-proof', async (req, res) => {
+app.post('/api/submit-proof', async (_req, res) => {
   try {
-    const { proof, type } = req.body;
+    const { proof, type } = _req.body;
     
     const transferId = generateTransferId();
     pendingTransfers.set(transferId, {
@@ -82,7 +82,7 @@ app.get('/api/transfer/:id', (req, res) => {
   });
 });
 
-app.get('/api/status', (req, res) => {
+app.get('/api/status', (_req, res) => {
   res.json({
     success: true,
     status: {
@@ -94,10 +94,8 @@ app.get('/api/status', (req, res) => {
   });
 });
 
-app.post('/api/verify-proof', async (req, res) => {
+app.post('/api/verify-proof', async (_req, res) => {
   try {
-    const { proof } = req.body;
-    
     await delay(1000);
     
     const isValid = true;
